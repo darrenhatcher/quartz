@@ -16,12 +16,13 @@ Log files are created by the application, so if the dashboard does not work, to 
 
 <code>docker ps</code> 
 
-Review the output and look for the four digit number in the docker instance. Then use the docker instance of the dashboard (the first column whihc is a hexadecimal number) and then run:
+Review the output and look for the four digit number in the docker instance. Then use the docker instance of the dashboard (the first column which is a hexadecimal number) and then run:
 
 <code>docker container exec -it \<docker instance\> bash</code>
 
-From there (at the shell prompt), go to the <code>/store/log</code> folder and look at <code>app.log</code> and <code>startup.log</code>.
+From there (if successful you should be at the shell prompt), go to the <code>/store/log</code> folder and look at <code>app.log</code> and <code>startup.log</code>.
 
 Notes:
 * The code is developed using the version of Python used at the time (2.x in this case), noting that official support for Python 2.x ends 31/12/2019. This is a limitation and nothing the author can do about it.
 * You need a working IBM QRadar SIEM to import the code. It should import and operate in the IBM QRadar "community edition" as well as full versions of QRadar.
+* If something is broken, add an issue to the github issues tracker and I'll have a look.
