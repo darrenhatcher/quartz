@@ -11,8 +11,10 @@ To use the code, you can either use the IBM App Editor and pull in the code dire
 Once downloaded and imported, there are things you need to do to use:
 * Edit the <code>views.py</code> file and add your SEC token. This is a hexadecimal string you need to create under "Authorised Services" to permit the application to make AQL queries. This looks like <code>DEFAULT_SEC_TOKEN = '1063f153-2140-41dc-87c7-1302462c86ea'</code>
 * Edit the <code>views.py</code> file and adjust the variable <code>gLogSourceType = 'Experience%'</code> to your log source filter needed. The default filter is for traffic from the IBM QRadar Experience Centre application.
+* If it all installed normally, you should be able to add the dashboard to any of the default workspaces. Look for <b>Custom Dashboards->Latency Dashboard<b>
 
-Log files are created by the application, so if the dashboard does not work, to debug the application, log on to the SIEM using ssh and run the command:
+##If you have problems ...
+You will need to look at the log files for the application inside the docker instance it is running as. Log files are created by the application as it goes along, so if the dashboard does not work, to debug the application, log on to the SIEM using <code>ssh</code> and run the command:
 
 <code>docker ps</code> 
 
